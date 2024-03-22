@@ -1,56 +1,93 @@
 /* PC  */
-@media (min-width :	992px) {
-    
+@media (min-width: 992px) {
+  .mobile-header {
+    display: none;
+  }
 }
 /* Tablet & mobile */
-@media (max-width :	991.98px) {
-    /* 1. ẩn navbar */
-    .navbar{
-        display: none;
-    }
-    /* 2.Chuyển logo vào giữa */
-    .header-top{
-        position: relative;
-    }
-    .header__logo{
-        position: absolute;
-        left: 50%;
-        translate: -50% -50%;
-    }
-    /*3.căn lại vị trí của menu */
-    .menu-header__icon{
-        position: absolute;
-        color: #fff;
-        width: 24px;
-        top: 38px;
-        left: 26px;
-    }
-    /* 4.Overlay */
-    .menu-overlay{
-        position: fixed;
-        background-color: rgba(0, 0, 0, 0.3);
-        inset: 0;
-        z-index: 1; 
-        /* Bình thường ẩn overlay đi */
-        opacity: 0;
-        visibility: hidden;
-        transition: 0.5s;
-    }
-    /* 5.kiểm tra nếu menu-checkbox được check thì hiện overlay */
-    .menu-checkbox:checked ~ .menu-overlay{
-        opacity: 1;
-        visibility:visible;
-    }
+@media (max-width: 991.98px) {
+  /* 1. ẩn navbar */
+  .navbar {
+    display: none;
+  }
+  /* 2.Chuyển logo vào giữa */
+  .header-top {
+    position: relative;
+  }
+  .header__logo {
+    position: absolute;
+    left: 50%;
+    translate: -50% -50%;
+  }
+  /*3.căn lại vị trí của menu */
+  .menu-header__icon {
+    position: absolute;
+    color: #fff;
+    width: 24px;
+    top: 38px;
+    left: 26px;
+  }
+  /* 4.Overlay */
+  .menu-overlay {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.3);
+    inset: 0;
+    z-index: 1;
+    /* Bình thường ẩn overlay đi */
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+  }
+  /* 5.kiểm tra nếu menu-checkbox được check thì hiện overlay */
+  .menu-checkbox:checked ~ .menu-overlay {
+    opacity: 1;
+    visibility: visible;
+  }
+  /* 6.Code cho menu drawer */
+  .menu-drawer {
+    position: fixed;
+    background-color: #2e1919;
+    inset: 0 40% 0 0;
+    z-index: 2;
+    transform: translateX(-100%);
+    transition: 0.5s;
+    padding: 60px;
+  }
+  /* 7. Kiểm tra nếu check box được check hiện menu */
+  .menu-checkbox:checked ~ .menu-drawer {
+    transform: translateX(0);
+  }
+  /* 8.Menu top */
+  .close__menu {
+    width: 24px;
+    color: #fff;
+  }
+
+  .menu-drawer__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #navbar__list--mobile {
+    margin-top: 25px;
+  }
+  .navbar__link {
+    display: block;
+    font-size: 2rem;
+  }
+  .navbar__link:hover {
+    background-color: #00ffff37;
+  }
 }
 /* Tablet */
-@media (min-width :	768px) and (max-width : 991.98px) {
-    
+@media (min-width: 768px) and (max-width: 991.98px) {
 }
 /* Mobile */
-@media (max-width : 768.98px) {
-    
+@media (max-width: 768.98px) {
 }
 /* tạm ẩn phần không liên quan */
-.hero, .footer , main{
-    display: none;
+.hero,
+.footer,
+main {
+  display: none;
 }
